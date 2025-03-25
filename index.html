@@ -8,39 +8,47 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #fff8dc;
+            background-color: #f4f4f4;
             margin: 0;
             padding: 0;
         }
         header {
-            background-color: #ffd700;
+            background: linear-gradient(135deg, #ffd700, #ffae00);
             color: black;
             padding: 1.5em;
             text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         header img {
-            max-width: 200px;
+            max-width: 150px;
             height: auto;
             display: block;
             margin: 0 auto 1em;
         }
         main {
             display: flex;
-            justify-content: space-between;
+            flex-wrap: wrap;
+            justify-content: center;
             padding: 2em;
             max-width: 1200px;
             margin: 2em auto;
         }
         .server-info, .updates {
-            background-color: white;
+            background: white;
             padding: 2em;
-            border-radius: 10px;
+            border-radius: 15px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            width: 48%;
+            width: 45%;
+            margin: 1em;
+            transition: transform 0.3s ease-in-out;
+        }
+        .server-info:hover, .updates:hover {
+            transform: scale(1.02);
         }
         .server-info h2, .updates h2 {
             margin-top: 0;
+            border-bottom: 3px solid #ffd700;
+            padding-bottom: 0.5em;
         }
         .discord-button, .facebook-button {
             display: inline-block;
@@ -50,40 +58,42 @@
             border-radius: 5px;
             text-decoration: none;
             font-size: 18px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.2s;
         }
         .discord-button {
             background-color: #7289DA;
         }
         .discord-button:hover {
             background-color: #5b6eae;
+            transform: translateY(-2px);
         }
         .facebook-button {
             background-color: #3b5998;
         }
         .facebook-button:hover {
             background-color: #2d4373;
+            transform: translateY(-2px);
         }
         .updates img, .updates video {
             max-width: 100%;
             height: auto;
             margin-top: 1em;
-            position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .updates .overlay-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+        footer {
+            background: #222;
             color: white;
-            bottom: 0;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            padding: 1em 0;
+            margin-top: 2em;
         }
     </style>
 </head>
 <body>
     <header>
         <img src="logo1.png" alt="Server Logo">
+        <h1>Holly Town 4</h1>
     </header>
     <main>
         <div class="server-info">
@@ -98,13 +108,15 @@
         <div class="updates">
             <h2>Updates</h2>
             <p>อัพเดทประจำวันที่ 25/3/2568</p>
+            <h2></h2>
             <h2>ตู้เซฟในเลเบล</h2>
             <img src="update.png" alt="Update Image">
+            <h2></h2>
             <h2>การจกปูน</h2>
             <video controls>
                 <source src="update.mp4" type="video/mp4">
-                Your browser does not support the video tag.
             </video>
+            <h2></h2>
             <h2>การเพิ่มช่องเก็บของกระเป๋า</h2>
             <img src="update1.png" alt="Update Image">
         </div>
@@ -113,4 +125,4 @@
         <p>&copy; 2024 Holly Town 4 Minecraft Server. All rights reserved.</p>
     </footer>
 </body>
-</html></video>
+</html>
