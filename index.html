@@ -26,28 +26,20 @@
             margin: 0 auto 1em;
         }
         main {
+            display: flex;
+            justify-content: space-between;
             padding: 2em;
-            max-width: 800px;
+            max-width: 1200px;
             margin: 2em auto;
         }
-        footer {
-            background-color: #ffd700;
-            color: black;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
-            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
-        }
-        .server-info {
+        .server-info, .updates {
             background-color: white;
             padding: 2em;
             border-radius: 10px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            text-align: center;
+            width: 48%;
         }
-        .server-info h2 {
+        .server-info h2, .updates h2 {
             margin-top: 0;
         }
         .discord-button, .facebook-button {
@@ -72,6 +64,21 @@
         .facebook-button:hover {
             background-color: #2d4373;
         }
+        .updates img, .updates video {
+            max-width: 100%;
+            height: auto;
+            margin-top: 1em;
+            position: relative;
+        }
+        .updates .overlay-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
@@ -88,9 +95,22 @@
             <a href="https://discord.gg/KvDqmHUuwf" class="discord-button">Discord</a>
             <a href="https://www.facebook.com/your-facebook-page-link" class="facebook-button">Facebook</a>
         </div>
+        <div class="updates">
+            <h2>Updates</h2>
+            <p>อัพเดทประจำวันที่ 25/3/2568</p>
+            <h2>ตู้เซฟในเลเบล</h2>
+            <img src="update.png" alt="Update Image">
+            <h2>การจกปูน</h2>
+            <video controls>
+                <source src="update.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <h2>การเพิ่มช่องเก็บของกระเป๋า</h2>
+            <img src="update1.png" alt="Update Image">
+        </div>
     </main>
     <footer>
         <p>&copy; 2024 Holly Town 4 Minecraft Server. All rights reserved.</p>
     </footer>
 </body>
-</html>
+</html></video>
