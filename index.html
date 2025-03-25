@@ -8,13 +8,14 @@
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #FFF3B0; /* เหลืองพาสเทล */
             margin: 0;
             padding: 0;
+            color: #5A5A5A;
         }
         header {
-            background: linear-gradient(135deg, #ffd700, #ffae00);
-            color: black;
+            background-color: #FFD966; /* เหลืองพาสเทลเข้ม */
+            color: #5A5A5A;
             padding: 1.5em;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -24,30 +25,36 @@
             height: auto;
             display: block;
             margin: 0 auto 1em;
+            animation: logo-animation 2s infinite;
+        }
+        @keyframes logo-animation {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
         }
         main {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
             padding: 2em;
             max-width: 1200px;
             margin: 2em auto;
         }
         .server-info, .updates {
-            background: white;
+            background: #FFECB3; /* เหลืองพาสเทลอ่อน */
             padding: 2em;
             border-radius: 15px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            width: 45%;
-            margin: 1em;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            margin: 1em 0;
             transition: transform 0.3s ease-in-out;
+            color: #5A5A5A;
         }
         .server-info:hover, .updates:hover {
             transform: scale(1.02);
         }
         .server-info h2, .updates h2 {
             margin-top: 0;
-            border-bottom: 3px solid #ffd700;
+            border-bottom: 3px solid #D8BFD8; /* ม่วงพาสเทล */
             padding-bottom: 0.5em;
         }
         .discord-button, .facebook-button {
@@ -61,17 +68,18 @@
             transition: background-color 0.3s ease, transform 0.2s;
         }
         .discord-button {
-            background-color: #7289DA;
+            background-color: #D8BFD8;
         }
         .discord-button:hover {
-            background-color: #5b6eae;
+            background-color: #B899C2;
             transform: translateY(-2px);
         }
         .facebook-button {
-            background-color: #3b5998;
+            background-color: #FFD966;
+            color: #5A5A5A;
         }
         .facebook-button:hover {
-            background-color: #2d4373;
+            background-color: #E6C75A;
             transform: translateY(-2px);
         }
         .updates img, .updates video {
@@ -79,11 +87,11 @@
             height: auto;
             margin-top: 1em;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         }
         footer {
-            background: #222;
-            color: white;
+            background: #FFD966;
+            color: #5A5A5A;
             text-align: center;
             padding: 1em 0;
             margin-top: 2em;
@@ -93,7 +101,6 @@
 <body>
     <header>
         <img src="logo1.png" alt="Server Logo">
-        <h1>Holly Town 4</h1>
     </header>
     <main>
         <div class="server-info">
@@ -108,15 +115,12 @@
         <div class="updates">
             <h2>Updates</h2>
             <p>อัพเดทประจำวันที่ 25/3/2568</p>
-            <h2></h2>
             <h2>ตู้เซฟในเลเบล</h2>
             <img src="update.png" alt="Update Image">
-            <h2></h2>
             <h2>การจกปูน</h2>
             <video controls>
                 <source src="update.mp4" type="video/mp4">
             </video>
-            <h2></h2>
             <h2>การเพิ่มช่องเก็บของกระเป๋า</h2>
             <img src="update1.png" alt="Update Image">
         </div>
